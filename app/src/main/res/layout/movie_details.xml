@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="match_parent"
+            android:layout_height="170"
+            android:layout_marginTop="10"
+            android:src="@drawable/coffeee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/movies_title"
+            android:layout_width="100"
+            android:layout_height="wrap_content"
+            android:layout_margin="20"
+            android:layout_marginBottom="100dp"
+            android:text="Venom Let There Be Carnage"
+            android:textColor="@color/black"
+            android:textSize="20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_image" />
+
+        <TextView
+            android:id="@+id/movies_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30"
+            android:background="@drawable/card_bg"
+            android:padding="7"
+            android:text="2010"
+            android:textColor="@color/purple_500"
+            android:textSize="17"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintStart_toEndOf="@+id/movies_title"
+            app:layout_constraintTop_toTopOf="@+id/movies_title" />
+
+        <TextView
+            android:id="@+id/movies_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20"
+            android:text="1h 47m"
+            android:textColor="@color/black"
+            android:textSize="17"
+            app:drawableStartCompat="@drawable/ic_baseline_access_time_24"
+            app:layout_constraintStart_toStartOf="@+id/movies_date"
+            app:layout_constraintTop_toBottomOf="@+id/movies_date" />
+
+        <TextView
+            android:id="@+id/movies_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10"
+            android:drawableStart="@drawable/ic_baseline_star_rate_24"
+            android:text="9.1/10 IMDB"
+            android:textSize="17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movies_time"
+            app:layout_constraintTop_toTopOf="@+id/movies_time" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
