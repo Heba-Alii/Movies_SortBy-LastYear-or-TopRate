@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,9 @@ public class MovieFragment extends Fragment {
         mViewModel.moviesListMutableLiveData.observe(getViewLifecycleOwner(), new Observer<TopDataDetails>() {
             @Override
             public void onChanged(TopDataDetails topDataDetails) {
+                Log.d("TAG", "onChanged: get data");
                 movieDetailsAdapter.setList(topDataDetails.getItems());
+                Log.d("TAG", "onChanged: get data item");
             }
         });
         return root;

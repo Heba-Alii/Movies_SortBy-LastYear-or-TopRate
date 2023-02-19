@@ -1,15 +1,17 @@
 package com.heba.moviessortbylastyearottoprate.pojo;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class TopDataDetails {
-    private List<ItemsModel> items;
+public class TopDataDetails implements Serializable {
+    private ArrayList<ItemsModel> items;
 
-    public List<ItemsModel> getItems() {
+    public ArrayList<ItemsModel> getItems() {
         return items;
     }
 
-    public void setItems(List<ItemsModel> items) {
+    public void setItems(ArrayList<ItemsModel> items) {
         this.items = items;
     }
 }

@@ -13,14 +13,17 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MovieViewModel extends ViewModel {
-    MutableLiveData<TopDataDetails> moviesListMutableLiveData = new MutableLiveData<>();
 
+    MutableLiveData<TopDataDetails> moviesListMutableLiveData = new MutableLiveData<>();
     public void getData() {
         Call<TopDataDetails> call = MoviesClient.getINSTANCE().getItems().getItems();
         call.enqueue(new Callback<TopDataDetails>() {
             @Override
             public void onResponse(Call<TopDataDetails> call, Response<TopDataDetails> response) {
                 moviesListMutableLiveData.setValue(response.body());
+                if (response.isSuccessful()) {
+                    Log.d("TAG", "onResponse:success " + response.body().getItems());
+                }
             }
 
             @Override

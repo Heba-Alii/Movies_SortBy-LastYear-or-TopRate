@@ -1,9 +1,11 @@
 package com.heba.moviessortbylastyearottoprate.pojo;
 
-public class ItemsModel {
+import java.io.Serializable;
+
+public class ItemsModel implements Serializable {
     private String id;
     private String rank;
-    private String title;
+    private String title ;
     private String fullTitle;
     private String year;
     private String image;

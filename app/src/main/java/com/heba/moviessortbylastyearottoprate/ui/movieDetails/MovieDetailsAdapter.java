@@ -1,5 +1,6 @@
 package com.heba.moviessortbylastyearottoprate.ui.movieDetails;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,8 +30,9 @@ public class MovieDetailsAdapter extends RecyclerView.Adapter<MovieDetailsAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MovieDetailsViewHolder holder, int position) {
+        Log.d("TAG", "onBindViewHolder: ");
         ItemsModel itemsModel = moviesList.get(position);
-        holder.movie_title.setText(itemsModel.getTitle());
+        //holder.movie_title.setText(itemsModel.getTitle());
         holder.movies_date.setText(itemsModel.getYear());
         holder.movies_rate.setText(itemsModel.getImDbRating() + "/10 IMDB");
         Glide.with(holder.itemView)
