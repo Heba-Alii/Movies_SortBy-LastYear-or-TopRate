@@ -1,4 +1,4 @@
-package com.heba.moviessortbylastyearottoprate.MovieDetails;
+package com.heba.moviessortbylastyearottoprate.ui.movieDetails;
 
 import androidx.lifecycle.ViewModel;
 

@@ -1,16 +1,18 @@
-package com.heba.moviessortbylastyearottoprate.MovieDetails;
+package com.heba.moviessortbylastyearottoprate.ui.movieDetails;
+
+import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.heba.moviessortbylastyearortoprate.R;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.heba.moviessortbylastyearottoprate.R;
 
 public class MovieFragment extends Fragment {
 
@@ -32,4 +34,5 @@ public class MovieFragment extends Fragment {
         mViewModel = new ViewModelProvider(this).get(MovieViewModel.class);
         // TODO: Use the ViewModel
     }
+
 }
