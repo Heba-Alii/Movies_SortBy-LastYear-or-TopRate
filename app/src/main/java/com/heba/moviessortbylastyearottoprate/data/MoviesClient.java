@@ -48,7 +48,7 @@ public class MoviesClient {
         return INSTANCE;
     }
 
-    public MoviesInterface getMovies() {
+    public MoviesInterface getItems() {
         return moviesInterface;
     }
 }
