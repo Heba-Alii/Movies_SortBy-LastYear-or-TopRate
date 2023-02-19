@@ -30,7 +30,6 @@ public class MovieDetailsAdapter extends RecyclerView.Adapter<MovieDetailsAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MovieDetailsViewHolder holder, int position) {
-        Log.d("TAG", "onBindViewHolder: ");
         ItemsModel itemsModel = moviesList.get(position);
         holder.movie_title.setText(itemsModel.getTitle());
         holder.movies_date.setText(itemsModel.getYear());

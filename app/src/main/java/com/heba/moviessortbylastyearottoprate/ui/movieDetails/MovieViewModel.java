@@ -22,7 +22,7 @@ public class MovieViewModel extends ViewModel {
             public void onResponse(Call<TopDataDetails> call, Response<TopDataDetails> response) {
                 moviesListMutableLiveData.setValue(response.body());
                 if (response.isSuccessful()) {
-                    Log.d("TAG", "onResponse:success " + response.body().getItems());
+                    Log.d("TAG", "onResponse:success " + response.body());
                 }
             }
 

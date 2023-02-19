@@ -40,9 +40,8 @@ public class MovieFragment extends Fragment {
         mViewModel.moviesListMutableLiveData.observe(getViewLifecycleOwner(), new Observer<TopDataDetails>() {
             @Override
             public void onChanged(TopDataDetails topDataDetails) {
-                Log.d("TAG", "onChanged: get data");
                 movieDetailsAdapter.setList(topDataDetails.getItems());
-                Log.d("TAG", "onChanged: get data item");
+
             }
         });
         return root;
