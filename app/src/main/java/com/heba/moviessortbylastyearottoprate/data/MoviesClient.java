@@ -38,5 +38,17 @@ public class MoviesClient {
                 .client(okClient)
                 .build();
         moviesInterface = retrofit.create(MoviesInterface.class);
+
+    }
+
+    public static MoviesClient getINSTANCE() {
+        if (null == INSTANCE) {
+            INSTANCE = new MoviesClient();
+        }
+        return INSTANCE;
+    }
+
+    public MoviesInterface getMovies() {
+        return moviesInterface;
     }
 }
