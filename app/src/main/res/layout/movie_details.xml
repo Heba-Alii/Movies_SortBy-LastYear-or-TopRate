@@ -9,12 +9,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="400dp">
 
         <ImageView
             android:id="@+id/movie_image"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            android:layout_height="250dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/coffeee"
             app:layout_constraintEnd_toEndOf="parent"
@@ -22,16 +23,16 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/movies_title"
+            android:id="@+id/movies_full_title"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:layout_marginBottom="100dp"
+
             android:text="Venom Let There Be Carnage"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/movie_image" />
 
@@ -46,8 +47,8 @@
             android:textColor="@color/purple_500"
             android:textSize="17sp"
             app:flow_horizontalAlign="center"
-            app:layout_constraintStart_toEndOf="@+id/movies_title"
-            app:layout_constraintTop_toTopOf="@+id/movies_title" />
+            app:layout_constraintStart_toEndOf="@+id/movies_full_title"
+            app:layout_constraintTop_toTopOf="@+id/movies_full_title" />
 
         <TextView
             android:id="@+id/movies_time"
@@ -59,6 +60,7 @@
             android:textSize="17sp"
             app:drawableStartCompat="@drawable/ic_baseline_access_time_24"
             app:layout_constraintEnd_toEndOf="@+id/movies_date"
+            app:layout_constraintHorizontal_bias="0.482"
             app:layout_constraintStart_toStartOf="@+id/movies_date"
             app:layout_constraintTop_toBottomOf="@+id/movies_date" />
 

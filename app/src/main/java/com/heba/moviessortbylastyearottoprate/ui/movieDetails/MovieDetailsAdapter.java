@@ -32,7 +32,7 @@ public class MovieDetailsAdapter extends RecyclerView.Adapter<MovieDetailsAdapte
     public void onBindViewHolder(@NonNull MovieDetailsViewHolder holder, int position) {
         Log.d("TAG", "onBindViewHolder: ");
         ItemsModel itemsModel = moviesList.get(position);
-        //holder.movie_title.setText(itemsModel.getTitle());
+        holder.movie_title.setText(itemsModel.getTitle());
         holder.movies_date.setText(itemsModel.getYear());
         holder.movies_rate.setText(itemsModel.getImDbRating() + "/10 IMDB");
         Glide.with(holder.itemView)
@@ -62,7 +62,7 @@ public class MovieDetailsAdapter extends RecyclerView.Adapter<MovieDetailsAdapte
         public MovieDetailsViewHolder(@NonNull View itemView) {
             super(itemView);
             movie_image = itemView.findViewById(R.id.movie_image);
-            movie_title = itemView.findViewById(R.id.movie_title);
+            movie_title = itemView.findViewById(R.id.movies_full_title);
             movies_date = itemView.findViewById(R.id.movies_date);
             movies_time = itemView.findViewById(R.id.movies_time);
             movies_rate = itemView.findViewById(R.id.movies_rate);
