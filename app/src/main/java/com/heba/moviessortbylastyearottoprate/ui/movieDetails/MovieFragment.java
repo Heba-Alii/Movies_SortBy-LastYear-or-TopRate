@@ -15,9 +15,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.tabs.TabLayout;
 import com.heba.moviessortbylastyearottoprate.R;
 import com.heba.moviessortbylastyearottoprate.databinding.FragmentMovieBinding;
 import com.heba.moviessortbylastyearottoprate.pojo.TopDataDetails;
+
+import java.util.Objects;
 
 public class MovieFragment extends Fragment {
     private FragmentMovieBinding binding;
@@ -41,17 +44,31 @@ public class MovieFragment extends Fragment {
             @Override
             public void onChanged(TopDataDetails topDataDetails) {
                 movieDetailsAdapter.setList(topDataDetails.getItems());
-
+                binding.moviesTabs.addTab(binding.moviesTabs.newTab().setText("Year"));
+                binding.moviesTabs.addTab(binding.moviesTabs.newTab().setText("Rate"));
             }
         });
         return root;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(MovieViewModel.class);
-        // TODO: Use the ViewModel
-    }
+    public void initView() {
+        binding.moviesTabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
 
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+    }
 }
